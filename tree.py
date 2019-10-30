@@ -158,6 +158,12 @@ class Static_Tree(Base_Tree): #can either load in using a json string representa
         #a method to return a dictionary where the keys are problems and the values are a list of all components corresponding to that problem
         return self.problem_components
 
+    def add_edges_to_progression(self, progression_graph):
+    	#Add directed edges between parents and children to a graphviz graph for visualization purporses
+        for node_name, node_children in self.children.items():
+            for child_name in node_children:
+                progression_graph.edge(node_name, child_name, contraint = 'true')
+
 #Tree object for sorting concepts that adds items recursively
 class Build_Tree(Base_Tree):
     #a tree node, each node is the head of a subtree of its descendants
