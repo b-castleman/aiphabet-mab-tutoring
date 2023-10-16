@@ -1,5 +1,5 @@
 # Notice
-This repository is a cloned & edited repository of Mu, Goel, and Brunskill et al. (2017; https://github.com/StanfordAI4HI/Automatic_Curriculum_ZPDES_Memory)
+This repository is a cloned & edited repository of Mu, Goel, and Brunskill (2017; https://github.com/StanfordAI4HI/Automatic_Curriculum_ZPDES_Memory)
 
 # Automatic Curriculum ZPDES Memory
 Combines automatic Curriculum Generation[1,2] with a modified version of the ZPDES algorithm[3] that includes a memory module[4].
