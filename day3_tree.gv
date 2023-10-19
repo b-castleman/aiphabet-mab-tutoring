@@ -1,0 +1,17 @@
+strict digraph {
+	ethical_ai [label=ethical_ai]
+	Root -> ethical_ai [contraint=true]
+	Root -> ai_potential [contraint=true]
+	ethical_ai -> llms_and_chatgpt [contraint=true]
+	ai_potential -> llms_and_chatgpt [contraint=true]
+	ai_potential [label=ai_potential]
+	Root -> ethical_ai [contraint=true]
+	Root -> ai_potential [contraint=true]
+	ethical_ai -> llms_and_chatgpt [contraint=true]
+	ai_potential -> llms_and_chatgpt [contraint=true]
+	llms_and_chatgpt [label=llms_and_chatgpt]
+	Root -> ethical_ai [contraint=true]
+	Root -> ai_potential [contraint=true]
+	ethical_ai -> llms_and_chatgpt [contraint=true]
+	ai_potential -> llms_and_chatgpt [contraint=true]
+}
