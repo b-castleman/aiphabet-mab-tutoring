@@ -1,585 +1,358 @@
 {
-    "ai_intro_and_definitions":[
-       {
-            "question": "Which comment about the four schools of thought is NOT correct?",
-
-            "choices": ["Acting human-like: The Turing test approach closely aligns with this school of thought.",
-            "Thinking human-like: Cognitive science and modeling inspires this school of thought.",
-            "Thinking rationally: This school of thought is the most common approach to AI today.",
-            "Acting rationally: An agent that acts rationally acts so as to achieve the best outcome."],
-
-            "solution": ["Thinking rationally: This school of thought is the most common approach to AI today."]
-
-       },
-       {
-        "question": "Which school of thought is concerned with neuroscience?",
-
-        "choices": ["Acting human-like",
-        "Thinking human-like",
-        "Thinking rationally",
-        "Acting rationally"],
-
-        "solution": ["Thinking human-like"]
-
-   },
-   {
-    "question": "Which school of thought includes using logical deductions to make inferences of the world?",
-
-    "choices": ["Acting human-like",
-    "Thinking human-like",
-    "Thinking rationally",
-    "Acting rationally"],
-
-    "solution": ["Thinking rationally"]
-
-    },
-    {
-        "question": "Which school of thought includes the Turing Test (a computer exhibiting intelligent behaviour indistinguishable from that of a human)?",
-
-        "choices": ["Acting human-like",
-        "Thinking human-like",
-        "Thinking rationally",
-        "Acting rationally"],
-
-        "solution": ["Acting human-like"]
-
-    },
-    {
-        "question": "Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
-
-        "choices": ["Acting human-like",
-        "Thinking human-like",
-        "Thinking rationally",
-        "Acting rationally"],
-
-        "solution": ["Acting rationally"]
-
-    },
-    {
-        "question": "The previous video detailed many definitions of AI, which follow a core theme. Given this, which of the following is not a plausible definition of AI?",
-
-            "choices": ["AI is the simulation of human intelligence processes by machines, including learning, reasoning, problem-solving, and understanding natural language.",
+    "ai_definitions": [
+        {
+            "question": "The previous video detailed many definitions of AI, which follow a core theme. Given this, which of the following is not a plausible definition of AI?",
+            "choices": [
+                "AI is the simulation of human intelligence processes by machines, including learning, reasoning, problem-solving, and understanding natural language.",
                 "AI is a field of computer science that focuses on creating machines and software capable of performing tasks that typically require human intelligence.",
                 "AI is a technology that exclusively relies on human operators to perform tasks, with no autonomous decision-making capabilities.",
                 "AI is the development of algorithms and models that enable computers to perform tasks without explicit programming, learning from data and improving over time.",
-                "AI is a branch of computer science that seeks to create systems capable of perceiving and interacting with the world, making decisions, and achieving goals."],
-
-            "solution": ["AI is a technology that exclusively relies on human operators to perform tasks, with no autonomous decision-making capabilities."]
+                "AI is a branch of computer science that seeks to create systems capable of perceiving and interacting with the world, making decisions, and achieving goals."
+            ],
+            "solution": [
+                "AI is a technology that exclusively relies on human operators to perform tasks, with no autonomous decision-making capabilities."
+            ]
         }
     ],
-    "turing_test":[
+    "acting_rationally": [
+        {
+            "question": "Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        }
+    ],
+    "thinking_rationally": [
+        {
+            "question": "Which comment about the four schools of thought is NOT correct?",
+            "choices": [
+                "Acting human-like: The Turing test approach closely aligns with this school of thought.",
+                "Thinking human-like: Cognitive science and modeling inspires this school of thought.",
+                "Thinking rationally: This school of thought is the most common approach to AI today.",
+                "Acting rationally: An agent that acts rationally acts so as to achieve the best outcome."
+            ],
+            "solution": [
+                "Thinking rationally: This school of thought is the most common approach to AI today."
+            ]
+        },
+        {
+            "question": "Which school of thought includes using logical deductions to make inferences of the world?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Thinking rationally"
+            ]
+        }
+    ],
+    "thinking_humanlike": [
+        {
+            "question": "Which school of thought is concerned with neuroscience?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Thinking human-like"
+            ]
+        }
+    ],
+    "acting_humanlike": [
+        {
+            "question": "Which school of thought includes the Turing Test (a computer exhibiting intelligent behaviour indistinguishable from that of a human)?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting human-like"
+            ]
+        }
+    ],
+    "turing_test_definition": [
+        {
+            "question": "Which of the following statements accurately describe the Turing Test?",
+            "choices": [
+                "It was proposed by Alan Turing in the 1950s.",
+                "The test involves a human judge, a human respondent, and a machine.",
+                "The primary goal of the test is to determine if a machine can exhibit intelligent behavior indistinguishable from that of a human.",
+                "It assesses a machine's ability to solve mathematical problems.",
+                "Passing the Turing Test requires a machine to have true consciousness."
+            ],
+            "solution": [
+                "It was proposed by Alan Turing in the 1950s.",
+                "The test involves a human judge, a human respondent, and a machine.",
+                "The primary goal of the test is to determine if a machine can exhibit intelligent behavior indistinguishable from that of a human."
+            ]
+        }
+    ],
+    "turing_test_examples": [
         {
             "question": "Which of the following scenarios can constitute a Turing test (check all that apply)?",
-
-            "choices": ["A machine and a human anonymously submit a letter each to a jury of humans, and the jury has to determine which letter belongs to the human.",
-            "A robot dances in front of a jury of professional dancers, and the jury ranks the performance of the robot out of 10.",
-            "A machine and a human drive a car each with opaque windows, and the jury of humans has to guess which car belongs to the human.",
-            "A robot and a human race in a 100 meters sprint, and the winner gets a special prize."],
-
-            "solution": ["A machine and a human anonymously submit a letter each to a jury of humans, and the jury has to determine which letter belongs to the human.",
-                        "A machine and a human drive a car each with opaque windows, and the jury of humans has to guess which car belongs to the human."]
-
-       },
-       {
-            "question": "Which of the following statements accurately describe the Turing Test?",
-
-            "choices": ["It was proposed by Alan Turing in the 1950s.",
-            "The test involves a human judge, a human respondent, and a machine.",
-            "The primary goal of the test is to determine if a machine can exhibit intelligent behavior indistinguishable from that of a human.",
-            "It assesses a machine's ability to solve mathematical problems.",
-            "Passing the Turing Test requires a machine to have true consciousness."],
-
-            "solution": ["It was proposed by Alan Turing in the 1950s.",
-            "The test involves a human judge, a human respondent, and a machine.",
-            "The primary goal of the test is to determine if a machine can exhibit intelligent behavior indistinguishable from that of a human."]
+            "choices": [
+                "A machine and a human anonymously submit a letter each to a jury of humans, and the jury has to determine which letter belongs to the human.",
+                "A robot dances in front of a jury of professional dancers, and the jury ranks the performance of the robot out of 10.",
+                "A machine and a human drive a car each with opaque windows, and the jury of humans has to guess which car belongs to the human.",
+                "A robot and a human race in a 100 meters sprint, and the winner gets a special prize."
+            ],
+            "solution": [
+                "A machine and a human anonymously submit a letter each to a jury of humans, and the jury has to determine which letter belongs to the human.",
+                "A machine and a human drive a car each with opaque windows, and the jury of humans has to guess which car belongs to the human."
+            ]
         }
     ],
-    "applications_of_ai":[
+    "applications_of_ai_examples": [
         {
             "question": "Consider “DishMe”, a revolutionary AI to fill the dishwasher machine. DishMe can move around the kitchen. You put dirty dishes on the counter or in the sink or on top of the stove, and say no more, just push the button and DishMe will retrieve the dishes, pick them up, organize them in the dishwasher machine, and start a washing cycle. DishMe can handle all types of dishes and does a nifty good job at optimizing the space usage in the machine. What kind of AI applications is DishMe (check all that apply)?",
-
-            "choices": ["Robotics",
-            "Computer vision",
-            "Spoken language processing",
-            "Natural language processing",
-            "Planning",
-            "Games"],
-
-            "solution": ["Robotics","Computer vision","Planning"]
-       }
-    ],
-    "history_of_ai":[
-        {
-            "question": "What is the correct order of the events given below?\n\na.  Alan Turing published \"Computing Machinery and Intelligence\"\nb.  McCulloch and Pitts proposed a model for the neuron\nc.  Deep neural networks were invented and deep learning took over\nd.  AI research slowed down in a period known as the AI Winter\ne.  Frank Rosenblatt invented the Perceptron.",
-
-            "choices": ["a → b → d → e → c",
-            "b → a → d → c → e",
-            "b → a → e → d → c",
-            "a → e → b → c → d"],
-
-            "solution": ["b → a → e → d → c"]
-       },
-       {
-            "question": "The reasons for AI Winter (1980 - 1990) are (check all that apply):",
-
-            "choices": ["Lack of computational power",
-            "Expert systems could NOT handle uncertainty",
-            "Expert systems could NOT incorporate domain knowledge",
-            "Expert systems could NOT learn from experience",
-            "Funds dried up",
-            "Use of toy examples could NOT scale up"],
-
-            "solution": ["Lack of computational power",
-            "Expert systems could NOT handle uncertainty",
-            "Expert systems could NOT learn from experience",
-            "Funds dried up",
-            "Use of toy examples could NOT scale up"]
-       },
-       {
-            "question": "Recent AI success is due to a large extent to (check all that apply):",
-
-            "choices": ["Small and curated datasets",
-            "More computational power",
-            "Deep learning architectures",
-            "Using probability to model uncertainty",
-            "Machine learning",
-            "Multidisciplinary collaborations",
-            "Clean energy"],
-
+            "choices": [
+                "Robotics",
+                "Computer vision",
+                "Spoken language processing",
+                "Natural language processing",
+                "Planning",
+                "Games"
+            ],
             "solution": [
-            "More computational power",
-            "Deep learning architectures",
-            "Using probability to model uncertainty",
-            "Machine learning",
-            "Multidisciplinary collaborations"]
+                "Robotics",
+                "Computer vision",
+                "Planning"
+            ]
         }
     ],
-    "logical_agents":[
+    "gestation_era": [
+        {
+            "question": "Which of the following occurred in the Gestation of AI period?",
+            "choices": [
+                "Alan Turing published \"Computing Machinery and Intelligence",
+                "McCulloch and Pitts proposed a model for the neuron",
+                "Deep neural networks were invented and deep learning took over",
+                "AI research slowed down in a period known as the AI Winter"
+            ],
+            "solution": [
+                "Alan Turing published \"Computing Machinery and Intelligence",
+                "McCulloch and Pitts proposed a model for the neuron"
+            ]
+        }
+    ],
+    "early_enthusiasm_era": [
+        {
+            "question": "Which inventions were popular during the Early Enthusiasm and Expectations era?",
+            "choices": [
+                "World Wide Web",
+                "The Perceptron",
+                "Adaline",
+                "Benchmark Data"
+            ],
+            "solution": [
+                "The Perceptron",
+                "Adaline"
+            ]
+        }
+    ],
+    "knowledge_based_era": [
+        {
+            "question": "The reasons for AI Winter (1980 - 1990) are (check all that apply):",
+            "choices": [
+                "Lack of computational power",
+                "Expert systems could NOT handle uncertainty",
+                "Expert systems could NOT incorporate domain knowledge",
+                "Expert systems could NOT learn from experience",
+                "Funds dried up",
+                "Use of toy examples could NOT scale up"
+            ],
+            "solution": [
+                "Lack of computational power",
+                "Expert systems could NOT handle uncertainty",
+                "Expert systems could NOT learn from experience",
+                "Funds dried up",
+                "Use of toy examples could NOT scale up"
+            ]
+        }
+    ],
+    "ai_becomes_scientific": [
+        {
+            "question": "Recent AI success is due to a large extent to (check all that apply):",
+            "choices": [
+                "Small and curated datasets",
+                "More computational power",
+                "Deep learning architectures",
+                "Using probability to model uncertainty",
+                "Machine learning",
+                "Multidisciplinary collaborations",
+                "Clean energy"
+            ],
+            "solution": [
+                "More computational power",
+                "Deep learning architectures",
+                "Using probability to model uncertainty",
+                "Machine learning",
+                "Multidisciplinary collaborations"
+            ]
+        }
+    ],
+    "wumpus_world": [
+        {
+            "question": "Wumpus World consists of:",
+            "choices": [
+                "Decisions that can be optimized using logical deductions",
+                "Moving enemies that attack the primary agent",
+                "A partially observed environment",
+                "Random events that occur during the game based on probability"
+            ],
+            "solution": [
+                "Decisions that can be optimized using logical deductions",
+                "A partially observed environment"
+            ]
+        }
+    ],
+    "wumpus_inference_examples": [
+        {
+            "question": "Let the following be the knowledge base of an agent playing in Wumpus World, where the agent is current located at position (1,1): B_{1,1}, S_{1,1}, ¬P_{1,2}. What move should the logical agent take to optimize its points?",
+            "choices": [
+                "Move to (1,2)",
+                "Move to (2,1)",
+                "Shoot an arrow to (1,2)",
+                "Shoot an arrow to (2,1)"
+            ],
+            "solution": [
+                "Shoot an arrow to (1,2)"
+            ]
+        }
+    ],
+    "logic_review": [
+        {
+            "question": "Given that p → q, what can we deduce if we know that ¬q is true?",
+            "choices": [
+                "There is not enough information",
+                "¬p is true",
+                "q is true",
+                "p is true"
+            ],
+            "solution": [
+                "¬p is true"
+            ]
+        }
+    ],
+    "knowledge_base_definition": [
         {
             "question": "Logical agents do which of the following?",
-
-            "choices": ["Use rigid rules to make inferences",
-                        "Contain knowledgebases of their environment",
-                        "Include logical deduction game examples such as Wumpus",
-                        "Encompass examples involving uncertainty"],
-
-            "solution": ["Use rigid rules to make inferences",
-            "Contain knowledgebases of their environment",
-            "Include logical deduction game examples such as Wumpus"]
+            "choices": [
+                "Use rigid rules to make inferences",
+                "Contain knowledgebases of their environment",
+                "Include logical deduction game examples such as Wumpus",
+                "Encompass examples involving uncertainty"
+            ],
+            "solution": [
+                "Use rigid rules to make inferences",
+                "Contain knowledgebases of their environment",
+                "Include logical deduction game examples such as Wumpus"
+            ]
         }
     ],
-    "environment_types":[
+    "peas": [
+        {
+            "question": "In PEAS, what would the list for letter \"S\" consist of in a self driving car?",
+            "choices": [
+                "Efficiency, speed",
+                "Streets, pedestrians, stoplights",
+                "Wheels, motor, turn signal",
+                "Cameras, infrared sensors"
+            ],
+            "solution": [
+                "Cameras, infrared sensors"
+            ]
+        }
+    ],
+    "environment_types": [
         {
             "question": "What is the correct environment (E) categorization for the Wumpus World game?",
-
-            "choices": ["Fully Observable, Continuous, Multi-Agent, Stochastic",
-            "Partially Observable, Discrete, Multi-Agent, Stochastic",
-            "Partially Observable, Discrete, Single-Agent, Deterministic",
-            "Fully Observable, Continuous, Single-Agent, Deterministic"],
-
-            "solution": ["Partially Observable, Discrete, Single-Agent, Deterministic"]
-       }
-     ],
-    "search":[
+            "choices": [
+                "Fully Observable, Continuous, Multi-Agent, Stochastic",
+                "Partially Observable, Discrete, Multi-Agent, Stochastic",
+                "Partially Observable, Discrete, Single-Agent, Deterministic",
+                "Fully Observable, Continuous, Single-Agent, Deterministic"
+            ],
+            "solution": [
+                "Partially Observable, Discrete, Single-Agent, Deterministic"
+            ]
+        }
+    ],
+    "search_definition": [
+        {
+            "question": "Search agents do which of the following?",
+            "choices": [
+                "Considers impacts of actions on future states",
+                "Always will yield a solution, even if it is suboptimal",
+                "Identifies actions or series of actions that lead to goals",
+                "Involve route finding and game move optimization"
+            ],
+            "solution": [
+                "Considers impacts of actions on future states",
+                "Identifies actions or series of actions that lead to goals",
+                "Involve route finding and game move optimization"
+            ]
+        }
+    ],
+    "simple_search": [
+        {
+            "question": "In simple search, which following statements are correct?",
+            "choices": [
+                "A frontier is required to keep track of possible actions that can be made from the current state",
+                "A frontier is required to keep track of the states that have already been visited",
+                "Failure can occur before every possible solution is explored",
+                "Goal testing is always performed on every single neighboring node to the current state"
+            ],
+            "solution": [
+                "A frontier is required to keep track of possible actions that can be made from the current state",
+                "A frontier is required to keep track of the states that have already been visited",
+                "Failure can occur before every possible solution is explored",
+                "Goal testing is always performed on every single neighboring node to the current state"
+            ]
+        }
+    ],
+    "constraint_search": [
+        {
+            "question": "Constrained search problems:",
+            "choices": [
+                "Involve finding the best possible solution compared to other possible solutions",
+                "Involve finding any viable solution so long as it abides by constraining rules",
+                "Often involves problems like Chess and Go",
+                "Uses backtracking for runtime efficiency increases"
+            ],
+            "solution": [
+                "Involve finding any viable solution so long as it abides by constraining rules",
+                "Uses backtracking for runtime efficiency increases"
+            ]
+        }
+    ],
+    "adversarial_search": [
         {
             "question": "Adversarial search problems:",
-
-            "choices": ["Are typically known as games",
-                        "Occur in multiagent competitive environments",
-                        "Results in a strategy rather than an optimal sequence of actions",
-                        "Often cannot make the optimal decision when high branching factors are involved"],
-
-            "solution": ["Are typically known as games",
-            "Occur in multiagent competitive environments",
-            "Results in a strategy rather than an optimal sequence of actions",
-            "Often cannot make the optimal decision when high branching factors are involved"]
-       }
-    ],
-    "hello_world":[
-        {
-            "question": "External link",
-
-            "choices": ["Click when finished"],
-
-            "solution": ["Click when finished"]
-        }
-    ],
-    "operators":[
-        {
-            "question": "External link",
-
-            "choices": ["Click when finished"],
-
-            "solution": ["Click when finished"]
-        }
-    ],
-    "conditionals":[
-        {
-            "question": "External link",
-
-            "choices": ["Click when finished"],
-
-            "solution": ["Click when finished"]
-        }
-    ],
-    "loops":[
-        {
-            "question": "External link",
-
-            "choices": ["Click when finished"],
-
-            "solution": ["Click when finished"]
-        }
-    ],
-    "collections":[
-        {
-            "question": "External link",
-
-            "choices": ["Click when finished"],
-
-            "solution": ["Click when finished"]
-        }
-    ],
-    "functions":[
-        {
-            "question": "External link",
-
-            "choices": ["Click when finished"],
-
-            "solution": ["Click when finished"]
-        }
-    ],
-    "classes":[
-        {
-            "question": "External link",
-
-            "choices": ["Click when finished"],
-
-            "solution": ["Click when finished"]
-        }
-    ],
-    "ml_definitions_and_examples":[
-        {
-            "question": "Machine learning does what?",
-
-            "choices": ["Learns from experience",
-            "Makes predictions based on provided rules",
-            "Learns from minimal data",
-            "Makes predictions without specified rules"],
-
-            "solution": ["Learns from experience",
-            "Makes predictions without specified rules"]
-       }
-    ],
-    "supervised_learning":[
-        {
-            "question": "What is the difference between classification and regression? Check all that apply.",
-
-            "choices": ["Classification requires labeled data, while regression requires unlabeled data.",
-            "Regression has numerical values as labels while classification has categorical (discrete) labels."],
-
-            "solution": ["Regression has numerical values as labels while classification has categorical (discrete) labels."]
-       },
-       {
-            "question": "True or false: Supervised learning involves a learned model using labeled data.",
-
-            "choices": ["True",
-            "False"],
-
-            "solution": ["True"]
-        },
-        {
-            "question": "The line dividing different classifications of data is called the: ",
-
-            "choices": ["Decision boundary",
-            "Decision boundary",
-            "Separating bound",
-            "Linear feature",
-            "Linear regression"],
-
-            "solution": ["Decision boundary"]
-        },
-        {
-            "question": "In a linear regression that maps data points x to a real value y, the function f in which f(x) = y is called:",
-
-            "choices": ["A regressor",
-            "The terminating function",
-            "Transformation equation",
-            "Label",
-            "Labeler"],
-
-            "solution": ["A regressor"]
-        }
-    ],
-    "unsupervised_learning":[
-        {
-            "question": "True or false: Unsupervised learning involves a learned model using labeled data.",
-
-            "choices": ["True",
-            "False"],
-
-            "solution": ["False"]
-       },
-       {
-            "question": "An example of unsupervised learning is",
-
-            "choices": ["Clustering",
-            "Regression",
-            "Support vector machines",
-            "Decision trees"],
-
-            "solution": ["Clustering"]
-        }
-    ],
-    "training_testing_validation":[
-        {
-            "question": "Suppose you derived a classification model. The performance you obtained on the training set and the test set are both poor (large error). Check all that apply.",
-
-            "choices": ["The model suffers from underfitting.",
-            "The model suffers from overfitting.",
-            "Adding more complex features may help derive a better model."],
-
-            "solution": ["The model suffers from underfitting.",
-            "Adding more complex features may help derive a better model."]
-       },
-       {
-            "question": "If a model has high bias, it means you:",
-
-            "choices": ["Underfitted it",
-            "Overfitted it",
-            "Trained it \"just right\""],
-
-            "solution": ["Underfitted it"]
-        },
-        {
-            "question": "If a model has high variance, it means you:",
-
-            "choices": ["Underfitted it",
-            "Overfitted it",
-            "Trained it \"just right\""],
-
-            "solution": ["Overfitted it"]
-        },
-        {
-            "question": "True or False: In a classification setting, and during the model selection stage, the validation examples in the validation set are also used as training examples.",
-
-            "choices": ["True",
-            "False"],
-
-            "solution": ["False"]
-       },
-        {
-            "question": "The test data should be used in what way?",
-
-            "choices": ["Examples used for learning a model",
-            "Examples that cannot be used for learning the model but can help tune model parameters",
-            "Used to assess the performance of the final model but never for model tuning or revising"],
-
-            "solution": ["Used to assess the performance of the final model but never for model tuning or revising"]
-        },
-        {
-            "question": "What is the difference between classification and regression? Check all that apply.",
-
-            "choices": ["Regression has numerical values as labels while classification has categorical (discrete) labels.",
-            "Classification requires labeled data, while regression requires unlabeled data."],
-
-            "solution": ["Regression has numerical values as labels while classification has categorical (discrete) labels."]
-        },
-        {
-            "question": "The training data should be used in what way?",
-
-            "choices": ["Examples used for learning a model",
-            "Examples that cannot be used for learning the model but can help tune model parameters",
-            "Used to assess the performance of the final model but never for model tuning or revising"],
-
-            "solution": ["Examples used for learning a model"]
-        },
-        {
-            "question": "The validation data should be used in what way?",
-
-            "choices": ["Examples used for learning a model",
-            "Examples that cannot be used for learning the model but can help tune model parameters",
-            "Used to assess the performance of the final model but never for model tuning or revising"],
-
-            "solution": ["Examples that cannot be used for learning the model but can help tune model parameters"]
-        }
-    ],
-    "evaluation_metrics":[
-        {
-            "question": "Accuracy is denoted as: ",
-
-            "choices": ["(True Positives + True Negatives)/(All Predictions)",
-            "(True Positives)/(True Positives + False Positives)",
-            "(True Positives)/(True Positives + False Negatives)",
-            "(True Negatives)/(True Negatives + False Positives)"],
-
-            "solution": ["(True Positives + True Negatives)/(All Predictions)"]
-        },
-        {
-            "question": "Precision is denoted as: ",
-
-            "choices": ["(True Positives + True Negatives)/(All Predictions)",
-            "(True Positives)/(True Positives + False Positives)",
-            "(True Positives)/(True Positives + False Negatives)",
-            "(True Negatives)/(True Negatives + False Positives)"],
-
-            "solution": ["(True Positives)/(True Positives + False Positives)"]
-        },
-        {
-            "question": "Accuracy can be thought of as",
-
-            "choices": ["The percentage of predictions that are correct",
-            "The percentage of positive predictions that are correct",
-            "The percentage of positive cases that were predicted as positive",
-            "The percentage of negative cases that were predicted as negative"],
-
-            "solution": ["The percentage of predictions that are correct"]
-        },
-        {
-            "question": "Precision can be thought of as",
-
-            "choices": ["The percentage of predictions that are correct",
-            "The percentage of positive predictions that are correct",
-            "The percentage of positive cases that were predicted as positive",
-            "The percentage of negative cases that were predicted as negative"],
-
-            "solution": ["The percentage of positive predictions that are correct"]
-        }
-    ],
-    "neural_networks_intro":[
-        {
-            "question": "What do neural networks work especially well with?",
-
-            "choices": ["Handwritten characters",
-                        "Spoken words",
-                        "Faces",
-                        "Tabular data"],
-
-            "solution": ["Handwritten characters",
-            "Spoken words",
-            "Faces"]
-       }
-    ],
-    "perceptron":[
-        {
-            "question": "The perceptron is a method of",
-
-            "choices": ["Linear classification",
-                        "Nonlinear classification",
-                        "Linear regression",
-                        "Nonlinear regression"],
-
-            "solution": ["Linear classification"]
-       },
-       {
-            "question": "The perceptron works well to model which functions?",
-
-            "choices": ["AND",
-                        "OR",
-                        "NOT",
-                        "XOR"],
-
-            "solution": ["AND",
-                        "OR",
-                        "NOT"]
-        },
-        {
-            "question": "Which of the following is correct regarding the perceptron and the multi-layer perceptron (MLP)?",
-
-            "choices": ["Perceptron has one hidden layer, while MLP has multiple hidden layers.",
-            "MLP can learn non-linearly separable patterns, while Perceptron can only learn linearly separable patterns.",
-            "Both Perceptron and MLP can solve the XOR problem.",
-            "MLP and Perceptron are both unsupervised learning algorithms."],
-
-            "solution": ["MLP can learn non-linearly separable patterns, while Perceptron can only learn linearly separable patterns."]
-        }
-    ],
-    "deep_learning":[
-        {
-            "question": "Convolution neural networks (CNNs) do what?",
-
-            "choices": ["Classify images",
-                        "Classify sounds",
-                        "Classify tabular data"],
-
-            "solution": ["Classify images"]
-        },
-        {
-            "question": "Back propagation does what?",
-
-            "choices": ["Is used for classification (not layer weight updating)",
-                        "Only alters input and output layer weights",
-                        "Only updates hidden layer weights",
-                        "Updates all layer weights"],
-
-            "solution": ["Updates all layer weights"]
-        }
-    ],
-    "ml_project":[
-        {
-            "question": "External link",
-
-            "choices": ["Click when finished"],
-
-            "solution": ["Click when finished"]
-        }
-    ],
-    "ethical_ai":[
-        {
-            "question": "Why is interpretability an important requirement to develop an ethical AI (check all that apply)?",
-
-            "choices": ["Ensure AI models are as complex as possible so they perform well",
-            "Understand AI predictions",
-            "Ensure AI is fair",
-            "Advance science and our knowledge in general",
-            "Ensure AI is free",
-            "With transparent models, AI is more trusted and hence more used"],
-
-            "solution": ["Understand AI predictions",
-            "Ensure AI is fair",
-            "Advance science and our knowledge in general",
-            "With transparent models, AI is more trusted and hence more used"]
-       },
-       {
-        "question": "The lecture video states that AI models can be unfair. Which of the following is true (check all that apply)?",
-
-        "choices": ["Human discriminative decisions can find their ways in the data used to train AI models.",
-        "Data-driven models have the ability to reproduce patterns of past discrimination present in the data.",
-        "AI models are always fair and free of any bias.",
-        "Demographic disparities lead to the under-representation of some segments of our society (e.g., race, gender, etc.) in the data.",
-        "Decision-making based on AI can change the course of our lives and affect our access to opportunities (job, school, mortgage, healthcare, justice, etc.).",
-        "Because they are machine-generated, AI models do not have the ability to be unfair, unlike humans."],
-
-        "solution": ["Human discriminative decisions can find their ways in the data used to train AI models.",
-        "Data-driven models have the ability to reproduce patterns of past discrimination present in the data.",
-        "Demographic disparities lead to the under-representation of some segments of our society (e.g., race, gender, etc.) in the data.",
-        "Decision-making based on AI can change the course of our lives and affect our access to opportunities (job, school, mortgage, healthcare, justice, etc.)."]
-        }
-    ],
-    "ai_potential":[
-        {
-            "question": "With AI, the future has the potential to:",
-
-            "choices": ["Create better education",
-                        "Create better health care",
-                        "Improve employement",
-                        "Make society fairer",
-                        "Make society cleaner"],
-
-            "solution": ["Create better education",
-            "Create better health care",
-            "Improve employement",
-            "Make society fairer",
-            "Make society cleaner"]
-        }
-    ],
-    "llms_and_chatgpt":[
-        {
-            "question": "External link",
-
-            "choices": ["Click when finished"],
-
-            "solution": ["Click when finished"]
+            "choices": [
+                "Are typically known as games",
+                "Occur in multiagent competitive environments",
+                "Results in a strategy rather than an optimal sequence of actions",
+                "Often cannot make the optimal decision when high branching factors are involved"
+            ],
+            "solution": [
+                "Are typically known as games",
+                "Occur in multiagent competitive environments",
+                "Results in a strategy rather than an optimal sequence of actions",
+                "Often cannot make the optimal decision when high branching factors are involved"
+            ]
         }
     ]
- }
+}
