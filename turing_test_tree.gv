@@ -1,0 +1,8 @@
+strict digraph {
+	turing_test_definition [label=turing_test_definition]
+	Root -> turing_test_definition [contraint=true]
+	turing_test_definition -> turing_test_examples [contraint=true]
+	turing_test_examples [label=turing_test_examples]
+	Root -> turing_test_definition [contraint=true]
+	turing_test_definition -> turing_test_examples [contraint=true]
+}

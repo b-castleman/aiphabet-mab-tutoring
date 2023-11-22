@@ -12,11 +12,61 @@
             "solution": [
                 "AI is a technology that exclusively relies on human operators to perform tasks, with no autonomous decision-making capabilities."
             ]
+        },
+        {
+            "question": "THIS IS A COPy OF THE LAST QUESTION JUST FOR TESTING PURPOSES. The previous video detailed many definitions of AI, which follow a core theme. Given this, which of the following is not a plausible definition of AI?",
+            "choices": [
+                "AI is the simulation of human intelligence processes by machines, including learning, reasoning, problem-solving, and understanding natural language.",
+                "AI is a field of computer science that focuses on creating machines and software capable of performing tasks that typically require human intelligence.",
+                "AI is a technology that exclusively relies on human operators to perform tasks, with no autonomous decision-making capabilities.",
+                "AI is the development of algorithms and models that enable computers to perform tasks without explicit programming, learning from data and improving over time.",
+                "AI is a branch of computer science that seeks to create systems capable of perceiving and interacting with the world, making decisions, and achieving goals."
+            ],
+            "solution": [
+                "AI is a technology that exclusively relies on human operators to perform tasks, with no autonomous decision-making capabilities."
+            ]
+        },
+        {
+            "question": "SAME THING HERE!!! THIS IS A COPy OF THE LAST QUESTION JUST FOR TESTING PURPOSES. The previous video detailed many definitions of AI, which follow a core theme. Given this, which of the following is not a plausible definition of AI?",
+            "choices": [
+                "AI is the simulation of human intelligence processes by machines, including learning, reasoning, problem-solving, and understanding natural language.",
+                "AI is a field of computer science that focuses on creating machines and software capable of performing tasks that typically require human intelligence.",
+                "AI is a technology that exclusively relies on human operators to perform tasks, with no autonomous decision-making capabilities.",
+                "AI is the development of algorithms and models that enable computers to perform tasks without explicit programming, learning from data and improving over time.",
+                "AI is a branch of computer science that seeks to create systems capable of perceiving and interacting with the world, making decisions, and achieving goals."
+            ],
+            "solution": [
+                "AI is a technology that exclusively relies on human operators to perform tasks, with no autonomous decision-making capabilities."
+            ]
         }
     ],
     "acting_rationally": [
         {
             "question": "Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
             "choices": [
                 "Acting human-like",
                 "Thinking human-like",
@@ -52,6 +102,30 @@
             "solution": [
                 "Thinking rationally"
             ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
         }
     ],
     "thinking_humanlike": [
@@ -66,6 +140,30 @@
             "solution": [
                 "Thinking human-like"
             ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
         }
     ],
     "acting_humanlike": [
@@ -79,6 +177,54 @@
             ],
             "solution": [
                 "Acting human-like"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
             ]
         }
     ],
@@ -97,6 +243,42 @@
                 "The test involves a human judge, a human respondent, and a machine.",
                 "The primary goal of the test is to determine if a machine can exhibit intelligent behavior indistinguishable from that of a human."
             ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
         }
     ],
     "turing_test_examples": [
@@ -111,6 +293,30 @@
             "solution": [
                 "A machine and a human anonymously submit a letter each to a jury of humans, and the jury has to determine which letter belongs to the human.",
                 "A machine and a human drive a car each with opaque windows, and the jury of humans has to guess which car belongs to the human."
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
             ]
         }
     ],
@@ -145,6 +351,42 @@
                 "Alan Turing published \"Computing Machinery and Intelligence",
                 "McCulloch and Pitts proposed a model for the neuron"
             ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
         }
     ],
     "early_enthusiasm_era": [
@@ -159,6 +401,78 @@
             "solution": [
                 "The Perceptron",
                 "Adaline"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
             ]
         }
     ],
@@ -179,6 +493,66 @@
                 "Expert systems could NOT learn from experience",
                 "Funds dried up",
                 "Use of toy examples could NOT scale up"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
             ]
         }
     ],
@@ -201,6 +575,66 @@
                 "Machine learning",
                 "Multidisciplinary collaborations"
             ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
         }
     ],
     "wumpus_world": [
@@ -216,6 +650,30 @@
                 "Decisions that can be optimized using logical deductions",
                 "A partially observed environment"
             ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
         }
     ],
     "wumpus_inference_examples": [
@@ -230,6 +688,30 @@
             "solution": [
                 "Shoot an arrow to (1,2)"
             ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
         }
     ],
     "logic_review": [
@@ -243,6 +725,30 @@
             ],
             "solution": [
                 "¬p is true"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
             ]
         }
     ],
@@ -260,6 +766,30 @@
                 "Contain knowledgebases of their environment",
                 "Include logical deduction game examples such as Wumpus"
             ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
         }
     ],
     "peas": [
@@ -274,6 +804,30 @@
             "solution": [
                 "Cameras, infrared sensors"
             ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
         }
     ],
     "environment_types": [
@@ -287,6 +841,30 @@
             ],
             "solution": [
                 "Partially Observable, Discrete, Single-Agent, Deterministic"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
             ]
         }
     ],
@@ -303,6 +881,30 @@
                 "Considers impacts of actions on future states",
                 "Identifies actions or series of actions that lead to goals",
                 "Involve route finding and game move optimization"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
             ]
         }
     ],
@@ -321,6 +923,30 @@
                 "Failure can occur before every possible solution is explored",
                 "Goal testing is always performed on every single neighboring node to the current state"
             ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
         }
     ],
     "constraint_search": [
@@ -335,6 +961,30 @@
             "solution": [
                 "Involve finding any viable solution so long as it abides by constraining rules",
                 "Uses backtracking for runtime efficiency increases"
+            ],
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
             ]
         }
     ],
@@ -352,6 +1002,30 @@
                 "Occur in multiagent competitive environments",
                 "Results in a strategy rather than an optimal sequence of actions",
                 "Often cannot make the optimal decision when high branching factors are involved"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
+            ]
+        },
+        {
+            "question": "THIS IS A COPY!!! Which school of thought is concerned with intelligent agents \"doing the right thing\"?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Acting rationally"
             ]
         }
     ]

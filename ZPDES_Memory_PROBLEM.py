@@ -23,17 +23,29 @@ DEFAULT_PARAMS = {
             'gamma': 0.1, #Default
             'initial_weight': 0.5, #Default
             'initial_weight_multiplier': 4, #Default
+
+            # Difficulty parameters
+            'alpha1': 0.5,
+            'alpha2': 0.5,
+            'alpha3': 0.5,
+            'alpha4': 0.5,
             }
 
-class ZPDES_Memory(object):
+class ZPDES_Memory_PROBLEM(object):
 
     def __init__(self, progression_tree, params = DEFAULT_PARAMS):
-        #print("test")
+
+        # Get problem difficulties
+        self.problem_difficulties = [1, 3, 5]
+        
         
         #Load in the tree
         self.progression_tree = progression_tree
         all_concepts_list = self.progression_tree.return_all_concepts()
         all_components_list = self.progression_tree.return_all_basic_components()
+
+        print(all_concepts_list)
+        assert len(self.problem_difficulties) == len(all_concepts_list), "problem difficulty size != concept list size"
         
         #ZPDES parameters
         self.params = params
@@ -42,6 +54,8 @@ class ZPDES_Memory(object):
         assert 'progress_threshold' in params, "progress_threshold is not defined"
         assert 'memory_threshold' in params, "memory_threshold is not defined"
         assert 'memory_multiplier' in params, "memory_multiplier is not defined"
+
+        assert params['history_length'] % 2 == 0, "history length is not even"
 
         if 'skip' not in self.params:
         	self.params['skip'] = self.params['history_length']
@@ -79,6 +93,7 @@ class ZPDES_Memory(object):
         self.problem = None
         self.attempts = 0
         self.last_problem = None
+        self.last_answer_correctness = None # for difficulty question updating
         
         #Memory Variables
         self.memory_concept = None
@@ -106,12 +121,14 @@ class ZPDES_Memory(object):
         #Get a new problem
         self.new_problem()
 
-        #print("Current problem:",self.problem)
 
     def get_current_time(self):
         return current_time() - self.begin_time
 
     def new_problem(self):
+
+        # CHECK FOR self.last_answer_correctness BEFORE APPLYING WEIGHT CHANGES
+        
         self.attempts = 0
         if self.length_ZPD == 0:
             self.memory_concept = None
@@ -135,22 +152,17 @@ class ZPDES_Memory(object):
                     self.weights[concept] = max(mean_weight, self.params['min_weight'])
                     weights_ZPD[idx] = self.weights[concept]
                     weights_sum += weights_ZPD[idx]
-                # print("weights:")
-                # print(self.weights)
                 
                 #add exploration in
                 weights_ZPD = weights_ZPD + (float(weights_sum) * gamma/( 1.0 - gamma )) * zeta
                 weights_sum += weights_sum * gamma/float( 1.0 - gamma)
                 concepts_selection = copy.deepcopy(self.ZPD)
-                print("weights_ZPD")
-                print(weights_ZPD)
-                print("w_sum")
-                print(weights_sum)
 
                 
 
                 #if we are accounting for memory by adding it into the concepts ZPDES should select from
                 if self.review_type == memory.REVIEW_TYPES.IN_PROGRESSION:
+                    print("REVIEW TYPES IN PROGRESSION")
                     memory_threshold = self.params['memory_threshold']
                     memory_multiplier = self.params['memory_multiplier']
 
@@ -164,14 +176,12 @@ class ZPDES_Memory(object):
 
                 #select concept
                 pa = weights_ZPD / float(weights_sum)
-                #print("Concept Selection:")
-                #print(concepts_selection)
-                #print(pa)
-                print("CS:")
-                print(concepts_selection)
+                print("Probabilities - ZPD:")
                 print(weights_ZPD)
-                print('pa')
+                print("Probabilities - pa")
                 print(pa)
+                print("Concept Seletion")
+                print(concepts_selection)
                 self.concept = np.random.choice(concepts_selection, 1, p=pa)[0]
 
             if self.review_type == memory.REVIEW_TYPES.AS_NECESSARY:
@@ -183,36 +193,29 @@ class ZPDES_Memory(object):
                         break
             
             #SET PROBLEM
-            print("Setting problem...")
             self.set_problem()
         
     def set_problem(self):
         concept = self.memory_concept
         if concept == None:
             concept = self.concept
-        #print("ZPD:",self.ZPD)
-        #print("Memory concept:",self.concept)
 
         concept_problems = copy.deepcopy(self.concept_problems[concept])
         if len(concept_problems) > 1 and self.last_problem in concept_problems:
             concept_problems.remove(self.last_problem)
         problem_scores = np.zeros(len(concept_problems))
-        print("Problem Picker!! Begin!")
-        print("Concept problems: v v v")
-        print(concept_problems)
         for idx, problem in enumerate(concept_problems):
             problem_components = self.problem_components[problem]
             for component in problem_components:
                 problem_scores[idx] += 1.0/self.components_memory[component]
-                print('Component:',component)
-                print('Score:',problem_scores[idx])
-        #print(problem_scores)
-        #print(concept_problems)
+
         max_problem_arg = np.argmax(problem_scores)
         self.problem = concept_problems[max_problem_arg]
-        #print("Problem is now picked.")
+
 
     def student_attempt_update(self, student_attempt_correctness):
+        self.last_answer_correctness = student_attempt_correctness
+        
         if student_attempt_correctness:
             self.student_answer_update(self.attempts == 0)
         else:
@@ -236,15 +239,35 @@ class ZPDES_Memory(object):
             skip = self.params['skip']
             min_concept_attempts = self.params['min_concept_attempts']
             progress_threshold = self.params['progress_threshold']
-            max_concept_attemtps = self.params['max_concept_attempts']
+            max_concept_attempts = self.params['max_concept_attempts']
             concept = self.concept
 
             self.correctnesses[concept].append(student_answer_correctness)
+            print("CORRECTNESS MAP:")
+            print(self.correctnesses)
             num_concept_attempts = len(self.correctnesses[concept])
-            if num_concept_attempts >= history_length + skip:
-                reward = sum(self.correctnesses[concept][num_concept_attempts - history_length:]) / float(history_length) - sum(self.correctnesses[concept][num_concept_attempts - history_length - skip:num_concept_attempts - skip]) / float(history_length)
-                self.weights_histories[concept].append(reward)
-            if (len(self.correctnesses[concept]) >= min_concept_attempts and sum(self.correctnesses[concept][-min_concept_attempts:]) / float(min_concept_attempts) >= progress_threshold) or len(self.correctnesses[concept]) >= max_concept_attemtps:
+
+            # Not enough concept attempts, it'll go out of bounds. Let's assume a bunch of incorrect concept attempts instead
+            positiveRewardEnd = len(self.correctnesses[concept])
+            positiveRewardStart = max(0,positiveRewardEnd - int(history_length/2))
+
+            negativeRewardEnd = positiveRewardStart
+            negativeRewardStart = max(0,negativeRewardEnd - int(history_length/2))
+
+            print(positiveRewardStart,":",positiveRewardEnd,"--",negativeRewardStart,":",negativeRewardEnd)
+
+            # Add positive reward first
+            reward = sum(self.correctnesses[concept][positiveRewardStart:positiveRewardEnd]) / float(positiveRewardEnd-positiveRewardStart)
+
+            # Add negative reward last (if there is any yet, otherwise assume previously incorrect)
+            reward += -sum(self.correctnesses[concept][negativeRewardStart:negativeRewardEnd]) / float(history_length) if negativeRewardEnd-negativeRewardStart > 0 else 0
+                
+                
+            print("Reward:")
+            print(reward)
+            self.weights_histories[concept].append(reward)
+                
+            if (len(self.correctnesses[concept]) >= min_concept_attempts and sum(self.correctnesses[concept][-min_concept_attempts:]) / float(min_concept_attempts) >= progress_threshold) or len(self.correctnesses[concept]) >= max_concept_attempts:
                 self.ZPD.remove(concept)
                 self.mastered_concepts.append(concept)
 

@@ -23,9 +23,17 @@ DEFAULT_PARAMS = {
             'gamma': 0.1, #Default
             'initial_weight': 0.5, #Default
             'initial_weight_multiplier': 4, #Default
+
+
+
+            # Difficulty parameters
+            'alpha1': 0.5,
+            'alpha2': 0.5
+            'alpha3': 0.5,
+            'alpha4': 0.5,
             }
 
-class ZPDES_Memory(object):
+class ZPDES_Memory_2(object):
 
     def __init__(self, progression_tree, params = DEFAULT_PARAMS):
         #print("test")
@@ -79,6 +87,7 @@ class ZPDES_Memory(object):
         self.problem = None
         self.attempts = 0
         self.last_problem = None
+        #self.last_answer_correctness = None # for difficulty question updating
         
         #Memory Variables
         self.memory_concept = None
@@ -151,6 +160,7 @@ class ZPDES_Memory(object):
 
                 #if we are accounting for memory by adding it into the concepts ZPDES should select from
                 if self.review_type == memory.REVIEW_TYPES.IN_PROGRESSION:
+                    print("REVIEW TYPES IN PROGRESSION")
                     memory_threshold = self.params['memory_threshold']
                     memory_multiplier = self.params['memory_multiplier']
 
@@ -167,11 +177,8 @@ class ZPDES_Memory(object):
                 #print("Concept Selection:")
                 #print(concepts_selection)
                 #print(pa)
-                print("CS:")
-                print(concepts_selection)
-                print(weights_ZPD)
-                print('pa')
-                print(pa)
+                # Select concept
+                print(concept_selection)
                 self.concept = np.random.choice(concepts_selection, 1, p=pa)[0]
 
             if self.review_type == memory.REVIEW_TYPES.AS_NECESSARY:
@@ -213,6 +220,8 @@ class ZPDES_Memory(object):
         #print("Problem is now picked.")
 
     def student_attempt_update(self, student_attempt_correctness):
+        self.last_answer_correctness = student_attempt_correctness
+        
         if student_attempt_correctness:
             self.student_answer_update(self.attempts == 0)
         else:

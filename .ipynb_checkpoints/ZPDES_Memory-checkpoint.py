@@ -135,11 +135,17 @@ class ZPDES_Memory(object):
                     self.weights[concept] = max(mean_weight, self.params['min_weight'])
                     weights_ZPD[idx] = self.weights[concept]
                     weights_sum += weights_ZPD[idx]
-
+                # print("weights:")
+                # print(self.weights)
+                
                 #add exploration in
                 weights_ZPD = weights_ZPD + (float(weights_sum) * gamma/( 1.0 - gamma )) * zeta
                 weights_sum += weights_sum * gamma/float( 1.0 - gamma)
                 concepts_selection = copy.deepcopy(self.ZPD)
+                print("weights_ZPD")
+                print(weights_ZPD)
+                print("w_sum")
+                print(weights_sum)
 
                 
 
@@ -161,6 +167,11 @@ class ZPDES_Memory(object):
                 #print("Concept Selection:")
                 #print(concepts_selection)
                 #print(pa)
+                print("CS:")
+                print(concepts_selection)
+                print(weights_ZPD)
+                print('pa')
+                print(pa)
                 self.concept = np.random.choice(concepts_selection, 1, p=pa)[0]
 
             if self.review_type == memory.REVIEW_TYPES.AS_NECESSARY:
@@ -172,6 +183,7 @@ class ZPDES_Memory(object):
                         break
             
             #SET PROBLEM
+            print("Setting problem...")
             self.set_problem()
         
     def set_problem(self):
@@ -185,15 +197,15 @@ class ZPDES_Memory(object):
         if len(concept_problems) > 1 and self.last_problem in concept_problems:
             concept_problems.remove(self.last_problem)
         problem_scores = np.zeros(len(concept_problems))
-        #print("Problem Picker!! Begin!")
-        #print("Concept problems: v v v")
-        #print(concept_problems)
+        print("Problem Picker!! Begin!")
+        print("Concept problems: v v v")
+        print(concept_problems)
         for idx, problem in enumerate(concept_problems):
             problem_components = self.problem_components[problem]
             for component in problem_components:
                 problem_scores[idx] += 1.0/self.components_memory[component]
-                #print('Component:',component)
-                #print('Score:',problem_scores[idx])
+                print('Component:',component)
+                print('Score:',problem_scores[idx])
         #print(problem_scores)
         #print(concept_problems)
         max_problem_arg = np.argmax(problem_scores)

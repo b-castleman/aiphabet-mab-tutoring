@@ -1,0 +1,4 @@
+strict digraph {
+	applications_of_ai_examples [label=applications_of_ai_examples]
+	Root -> applications_of_ai_examples [contraint=true]
+}

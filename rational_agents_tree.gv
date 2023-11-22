@@ -1,0 +1,14 @@
+strict digraph {
+	acting_rationally [label=acting_rationally]
+	Root -> acting_rationally [contraint=true]
+	acting_rationally -> peas [contraint=true]
+	acting_rationally -> environment_types [contraint=true]
+	peas [label=peas]
+	Root -> acting_rationally [contraint=true]
+	acting_rationally -> peas [contraint=true]
+	acting_rationally -> environment_types [contraint=true]
+	environment_types [label=environment_types]
+	Root -> acting_rationally [contraint=true]
+	acting_rationally -> peas [contraint=true]
+	acting_rationally -> environment_types [contraint=true]
+}
