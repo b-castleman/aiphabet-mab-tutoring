@@ -206,7 +206,7 @@ class ZPDES_Memory_CONCEPT(object):
             self.discrete_time += 1
             self.attempts += 1
             
-    def student_answer_update(self, student_answer_correctness):
+    def student_answer_update(self, student_answer_correctness, difficulty=None):
         self.discrete_time += 1
         if not student_answer_correctness:
             self.attempts = max(1, self.attempts)
@@ -226,7 +226,12 @@ class ZPDES_Memory_CONCEPT(object):
             max_concept_attempts = self.params['max_concept_attempts']
             concept = self.concept
 
-            self.correctnesses[concept].append(student_answer_correctness)
+            if difficulty is not None:
+                f = difficulty - 3.0 # standardize
+                s = 1.0/(1.0 + math.exp(-f)) + 0.5 # sigmoid + lift
+                student_answer_correctness = float(student_answer_correctness) * s
+            
+            self.correctnesses[concept].append(float(student_answer_correctness))
             print("CORRECTNESS MAP:")
             print(self.correctnesses)
             num_concept_attempts = len(self.correctnesses[concept])
@@ -245,6 +250,8 @@ class ZPDES_Memory_CONCEPT(object):
 
             # Add negative reward last (if there is any yet, otherwise assume previously incorrect)
             reward += -sum(self.correctnesses[concept][negativeRewardStart:negativeRewardEnd]) / float(history_length) if negativeRewardEnd-negativeRewardStart > 0 else 0
+
+
                 
                 
             print("Reward:")
