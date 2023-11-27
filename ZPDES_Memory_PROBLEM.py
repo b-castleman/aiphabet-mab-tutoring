@@ -28,7 +28,7 @@ DEFAULT_PARAMS = {
             'alpha2': 1.1,
             'alpha3': 1.0/1.3, # set as the inverse
             'alpha4': 1.0/1.1, # set as the inverse
-            'tao': 0.55, # difficulty damper
+            'tao': 7.37, # difficulty damper
             }
 
 class ZPDES_Memory_PROBLEM(object):
@@ -41,6 +41,7 @@ class ZPDES_Memory_PROBLEM(object):
         #Load in the tree
         self.progression_tree = progression_tree
         all_concepts_list = self.progression_tree.return_all_concepts()
+        # print("ALL CONCEPTS:",all_concepts_list)
         all_components_list = self.progression_tree.return_all_basic_components()
 
         for concept in all_concepts_list:
@@ -131,7 +132,8 @@ class ZPDES_Memory_PROBLEM(object):
         # Initialize Difficulty Multiplier
         self.m = dict()
         for concept in all_concepts_list:
-            self.m[concept] = math.exp(self.params['tao']/float(self.problem_difficulties[concept]))
+            self.m[concept] = math.exp(-(float(self.problem_difficulties[concept] - 3.0)**2/self.params['tao']))
+
         
         #Get a new problem
         self.new_problem()
@@ -153,19 +155,19 @@ class ZPDES_Memory_PROBLEM(object):
             if self.memory_concept == None:
 
                 # Remove repeat possibilities so we dont get the same problem twice
-                print("self.ZPD:")
-                print(self.ZPD)
+                # print("self.ZPD:")
+                # print(self.ZPD)
                 ZPD = copy.deepcopy(self.ZPD)
                 
-                print("Last Concept:")
-                print(self.last_concept)
+                # print("Last Concept:")
+                # print(self.last_concept)
                 if len(ZPD) > 1 and self.last_concept in ZPD:
                     ZPD.remove(self.last_concept)
                     # idx = ZPD.index(self.last_concept)
                     # del ZPD[idx]
                     # del 
-                print("ZPD:")
-                print(ZPD)
+                # print("ZPD:")
+                # print(ZPD)
 
                 length_ZPD = len(ZPD)
                 weights_ZPD = np.zeros(length_ZPD)
@@ -181,9 +183,9 @@ class ZPDES_Memory_PROBLEM(object):
                         mean_weight = np.mean(self.weights_histories[concept])
                     self.weights[concept] = max(mean_weight, self.params['min_weight'])
                     weights_ZPD[idx] = self.weights[concept]
-                    print("Before for",concept,":",weights_ZPD[idx])
+                    # print("Before for",concept,":",weights_ZPD[idx])
                     weights_ZPD[idx] *= self.m[concept] # difficulty alter multiplier
-                    print("After for",concept,":",weights_ZPD[idx])
+                    # print("After for",concept,":",weights_ZPD[idx])
                     
                     weights_sum += weights_ZPD[idx]
                     
@@ -211,10 +213,10 @@ class ZPDES_Memory_PROBLEM(object):
 
                 #select concept
                 pa = weights_ZPD / float(weights_sum)
-                print("Probabilities - pa")
-                print(pa)
-                print("Concept Selection")
-                print(concepts_selection)
+                # print("Probabilities - pa")
+                # print(pa)
+                # print("Concept Selection")
+                # print(concepts_selection)
                 self.concept = np.random.choice(concepts_selection, 1, p=pa)[0]
 
             if self.review_type == memory.REVIEW_TYPES.AS_NECESSARY:
@@ -325,10 +327,10 @@ class ZPDES_Memory_PROBLEM(object):
             
             ## Correct weights based on difficulties and answer correctness
 
-            print("Before:")
-            print(self.weights_histories)
+            # print("Before:")
+            # print(self.weights_histories)
 
-            print("Gamma_b",self.params['gamma'])
+            # print("Gamma_b",self.params['gamma'])
             
             # Get question difficulty
             qs_difficulty = self.problem_difficulties[concept]
@@ -337,8 +339,8 @@ class ZPDES_Memory_PROBLEM(object):
                 for zpdConcept in self.ZPD:
                     if self.problem_difficulties[zpdConcept] > qs_difficulty:
                         self.m[zpdConcept] *= alpha1
-                    # elif self.problem_difficulties[zpdConcept] < qs_difficulty:
-                    #     self.m[zpdConcept] *= alpha3
+                    elif self.problem_difficulties[zpdConcept] < qs_difficulty:
+                        self.m[zpdConcept] *= alpha3
                         
                 # Increase exploration factor
                 self.params['gamma'] *= alpha2
@@ -347,15 +349,15 @@ class ZPDES_Memory_PROBLEM(object):
                 for zpdConcept in self.ZPD:
                     if self.problem_difficulties[zpdConcept] > qs_difficulty:
                         self.m[zpdConcept] *= alpha3
-                    # elif self.problem_difficulties[zpdConcept] > qs_difficulty:
-                    #     self.m[zpdConcept] *= alpha1
+                    elif self.problem_difficulties[zpdConcept] > qs_difficulty:
+                        self.m[zpdConcept] *= alpha1
 
                 # Decrease exploration factor
                 self.params['gamma'] *= alpha4
 
-            print("After:")
-            print(self.weights_histories)
-            print("Gamma_a",self.params['gamma'])
+            # print("After:")
+            # print(self.weights_histories)
+            # print("Gamma_a",self.params['gamma'])
                 
 
         self.new_problem()

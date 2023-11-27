@@ -13,7 +13,6 @@ from compare_functions import compare_ngrams
 import re
 import os
 import json
-print('Importing Complete!')
 
 class Joint_Progression_Algorithm(object):
 
@@ -143,9 +142,11 @@ class Joint_Progression_Algorithm(object):
 
         with open('./problems/problems.json') as json_file:
               problemsDict = json.load(json_file)
+        
 
         for concept in all_concepts:
             problemList = problemsDict[concept]
+            
 
             # Define tree necessities
             all_problems = []

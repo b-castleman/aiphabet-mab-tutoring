@@ -56,6 +56,34 @@
             ],
             "difficulty": 3,
             "id": "this is a placeholder for q3's id"
+        },
+                {
+            "question": "THIS IS A COPY! Which comment about the four schools of thought is NOT correct?",
+            "choices": [
+                "Acting human-like: The Turing test approach closely aligns with this school of thought.",
+                "Thinking human-like: Cognitive science and modeling inspires this school of thought.",
+                "Thinking rationally: This school of thought is the most common approach to AI today.",
+                "Acting rationally: An agent that acts rationally acts so as to achieve the best outcome."
+            ],
+            "solution": [
+                "Thinking rationally: This school of thought is the most common approach to AI today."
+            ],
+            "difficulty": 4,
+            "id": "this is a placeholder for q4's id yAYYY"
+        },
+        {
+            "question": "THIS IS A COPY! Which school of thought includes using logical deductions to make inferences of the world?",
+            "choices": [
+                "Acting human-like",
+                "Thinking human-like",
+                "Thinking rationally",
+                "Acting rationally"
+            ],
+            "solution": [
+                "Thinking rationally"
+            ],
+            "difficulty": 5,
+            "id": "this is a placeholder for q5's id YAyasY"
         }
     ],
     "thinking_rationally": [
