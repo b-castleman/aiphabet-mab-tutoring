@@ -38,7 +38,7 @@ class Joint_Progression_Algorithm(object):
             'progress_threshold': 0.74,
             'memory_threshold': math.exp(-12),
             'memory_multiplier': 10e10,
-            'max_concept_attempts': 3,
+            'max_concept_attempts': 8,
             'min_concept_attempts': 1,
         }
     
@@ -177,9 +177,9 @@ class Joint_Progression_Algorithm(object):
 
         
 
-    def makeConceptProgressionTree(self,unit):
+    def makeConceptProgressionTree(self,section):
         all_concepts = []
-        if unit == 'ai_intro_and_defs':
+        if section == 'ai_intro_and_defs':
             all_concepts.extend(['ai_definitions','four_schools_of_thought'])
             
             tree_structure = {
@@ -188,7 +188,7 @@ class Joint_Progression_Algorithm(object):
                 'four_schools_of_thought':[]
             }
             
-        elif unit == 'turing_test':
+        elif section == 'turing_test':
             all_concepts.extend(['turing_test_definition','turing_test_examples'])
         
             tree_structure = {
@@ -197,14 +197,14 @@ class Joint_Progression_Algorithm(object):
                     'turing_test_examples': []
             }
         
-        elif unit == 'applications_of_ai':
+        elif section == 'applications_of_ai':
             all_concepts.extend(['applications_of_ai_examples'])
         
             tree_structure = {
                     'Root': ['applications_of_ai_examples'],
                     'applications_of_ai_examples': []
             }
-        elif unit == 'history_of_ai':
+        elif section == 'history_of_ai':
             all_concepts.extend(['gestation_and_early_enthusiasm_era','knowledge_based_era','ai_becomes_scientific'])
         
             tree_structure = {
@@ -213,7 +213,7 @@ class Joint_Progression_Algorithm(object):
                         'knowledge_based_era': ['ai_becomes_scientific'],
                         'ai_becomes_scientific': []
                 }
-        elif unit == 'logical_agents':
+        elif section == 'logical_agents':
             all_concepts.extend(['wumpus_world','wumpus_inference_examples','logic_review','knowledge_base_definition'])
         
             tree_structure = {
@@ -222,7 +222,7 @@ class Joint_Progression_Algorithm(object):
                         'logic_review': [],
                         'wumpus_world': [],
                 }
-        elif unit == 'rational_agents':
+        elif section == 'rational_agents':
             all_concepts.extend(['acting_rationally','peas','environment_types'])
         
             tree_structure = {
@@ -231,7 +231,7 @@ class Joint_Progression_Algorithm(object):
                 'peas': [],
                 'environment_types': [],
             }
-        elif unit == 'search':
+        elif section == 'search':
             all_concepts.extend(['search_definition','simple_search','constraint_search','adversarial_search'])
         
             tree_structure = {
@@ -242,7 +242,7 @@ class Joint_Progression_Algorithm(object):
                 'constraint_search': []
             }
         else:
-            raise Exception('Invalid unit')
+            raise Exception('Invalid section')
 
         return self.makeStaticTree(all_concepts,tree_structure)
 

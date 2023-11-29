@@ -252,13 +252,13 @@ class ZPDES_Memory_CONCEPT(object):
             reward += -sum(self.correctnesses[concept][negativeRewardStart:negativeRewardEnd]) / float(history_length) if negativeRewardEnd-negativeRewardStart > 0 else 0
 
 
-                
+                # [0,0,1,1] 2 - 0 ,   [0,1,0,1] 1 - 1 = 0
                 
             # print("Reward:")
             # print(reward)
             self.weights_histories[concept].append(reward)
                 
-            if (len(self.correctnesses[concept]) >= min_concept_attempts and sum(self.correctnesses[concept][-min_concept_attempts:]) / float(min_concept_attempts) >= progress_threshold) or len(self.correctnesses[concept]) >= max_concept_attempts:
+            if (len(self.correctnesses[concept]) >= min_concept_attempts and sum(self.correctnesses[concept][max(0,len(self.correctnesses[concept])-self.params['history_length']):]) / float(self.params['history_length']) >= progress_threshold) or len(self.correctnesses[concept]) >= max_concept_attempts:
                 self.ZPD.remove(concept)
                 self.mastered_concepts.append(concept)
 

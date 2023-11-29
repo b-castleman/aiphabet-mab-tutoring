@@ -25,10 +25,10 @@ DEFAULT_PARAMS = {
 
             # Difficulty parameters
             'alpha1': 1.3,
-            'alpha2': 1.1,
+            'alpha2': 1.0,
             'alpha3': 1.0/1.3, # set as the inverse
-            'alpha4': 1.0/1.1, # set as the inverse
-            'tao': 7.37, # difficulty damper
+            'alpha4': 1.0/1.0, # set as the inverse
+            'tau': 7.37, # difficulty damper
             }
 
 class ZPDES_Memory_PROBLEM(object):
@@ -80,8 +80,8 @@ class ZPDES_Memory_PROBLEM(object):
         	self.params['alpha3'] = DEFAULT_PARAMS['alpha3']
         if 'alpha4' not in self.params:
         	self.params['alpha4'] = DEFAULT_PARAMS['alpha4']
-        if 'tao' not in self.params:
-        	self.params['tao'] = DEFAULT_PARAMS['tao']
+        if 'tau' not in self.params:
+        	self.params['tau'] = DEFAULT_PARAMS['tau']
 
         self.concept_problems = self.progression_tree.return_concept_problems()
         self.problem_components = self.progression_tree.return_problem_components()
@@ -132,7 +132,7 @@ class ZPDES_Memory_PROBLEM(object):
         # Initialize Difficulty Multiplier
         self.m = dict()
         for concept in all_concepts_list:
-            self.m[concept] = math.exp(-(float(self.problem_difficulties[concept] - 3.0)**2/self.params['tao']))
+            self.m[concept] = math.exp(-(float(self.problem_difficulties[concept] - 3.0)**2/self.params['tau']))
 
         
         #Get a new problem
@@ -306,7 +306,7 @@ class ZPDES_Memory_PROBLEM(object):
             #print(reward)
             self.weights_histories[concept].append(reward)
                 
-            if (len(self.correctnesses[concept]) >= min_concept_attempts and sum(self.correctnesses[concept][-min_concept_attempts:]) / float(min_concept_attempts) >= progress_threshold) or len(self.correctnesses[concept]) >= max_concept_attempts:
+            if (len(self.correctnesses[concept]) >= min_concept_attempts and sum(self.correctnesses[concept][negativeRewardStart:]) / float(self.params['history_length']) >= progress_threshold) or len(self.correctnesses[concept]) >= max_concept_attempts:
                 self.ZPD.remove(concept)
                 self.mastered_concepts.append(concept)
 
@@ -338,9 +338,9 @@ class ZPDES_Memory_PROBLEM(object):
                 # Increase weights for questions more difficult than the last question
                 for zpdConcept in self.ZPD:
                     if self.problem_difficulties[zpdConcept] > qs_difficulty:
-                        self.m[zpdConcept] *= alpha1
+                        self.m[zpdConcept] *= alpha1 # alpha1 > 1
                     elif self.problem_difficulties[zpdConcept] < qs_difficulty:
-                        self.m[zpdConcept] *= alpha3
+                        self.m[zpdConcept] *= alpha3 # alpha3 = 1/alpha1
                         
                 # Increase exploration factor
                 self.params['gamma'] *= alpha2
