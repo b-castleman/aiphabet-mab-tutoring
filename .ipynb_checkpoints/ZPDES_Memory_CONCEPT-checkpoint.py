@@ -138,8 +138,9 @@ class ZPDES_Memory_CONCEPT(object):
                     weights_sum += weights_ZPD[idx]
                 
                 #add exploration in
-                weights_ZPD = weights_ZPD + (float(weights_sum) * gamma/( 1.0 - gamma )) * zeta
-                weights_sum += weights_sum * gamma/float( 1.0 - gamma)
+                weights_ZPD = weights_ZPD * (1-gamma) + gamma/length_ZPD # (float(weights_sum) * gamma/( 1.0 - gamma )) * zeta 
+                #weights_sum += weights_sum * gamma/float( 1.0 - gamma)
+                weights_sum = sum(weights_ZPD)
                 concepts_selection = copy.deepcopy(self.ZPD)
 
                 

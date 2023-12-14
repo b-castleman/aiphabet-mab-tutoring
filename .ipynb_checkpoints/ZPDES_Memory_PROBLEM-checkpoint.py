@@ -189,11 +189,22 @@ class ZPDES_Memory_PROBLEM(object):
                     
                     weights_sum += weights_ZPD[idx]
                     
+
+                print("Pre Explore Problem Weights:")
+                print(weights_ZPD)
                 
                 #add exploration in
-                weights_ZPD = weights_ZPD + (float(weights_sum) * gamma/( 1.0 - gamma )) * zeta
-                weights_sum += weights_sum * gamma/float( 1.0 - gamma)
+                #weights_ZPD = weights_ZPD + (float(weights_sum) * gamma/( 1.0 - gamma )) * zeta
+                weights_ZPD = weights_ZPD * (1-gamma) + gamma/length_ZPD # (float(weights_sum) * gamma/( 1.0 - gamma )) * zeta 
+                #weights_sum += weights_sum * gamma/float( 1.0 - gamma)
+                weights_sum = sum(weights_ZPD)
                 concepts_selection = copy.deepcopy(ZPD)
+
+                print("Problem ZPD:")
+                print(concepts_selection)
+                print("Post Explore Problem Weights:")
+                print(weights_ZPD)
+                
 
                 
 
@@ -213,6 +224,8 @@ class ZPDES_Memory_PROBLEM(object):
 
                 #select concept
                 pa = weights_ZPD / float(weights_sum)
+                print("Problem Probability")
+                print(pa)
                 # print("Probabilities - pa")
                 # print(pa)
                 # print("Concept Selection")
@@ -305,8 +318,9 @@ class ZPDES_Memory_PROBLEM(object):
             #print("Reward:")
             #print(reward)
             self.weights_histories[concept].append(reward)
-                
-            if (len(self.correctnesses[concept]) >= min_concept_attempts and sum(self.correctnesses[concept][negativeRewardStart:]) / float(self.params['history_length']) >= progress_threshold) or len(self.correctnesses[concept]) >= max_concept_attempts:
+
+            # For the problem MAB, we'll automatically remove this problem from the ZPD if answered correctly
+            if student_answer_correctness or (len(self.correctnesses[concept]) >= min_concept_attempts and sum(self.correctnesses[concept][negativeRewardStart:]) / float(self.params['history_length']) >= progress_threshold) or (len(self.correctnesses[concept]) >= max_concept_attempts):
                 self.ZPD.remove(concept)
                 self.mastered_concepts.append(concept)
 

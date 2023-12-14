@@ -185,7 +185,7 @@ class Joint_Progression_Algorithm(object):
             tree_structure = {
                 'Root': ['ai_definitions'],
                 'ai_definitions': ['four_schools_of_thought'],
-                'four_schools_of_thought':[]
+                'four_schools_of_thought': []
             }
             
         elif section == 'turing_test':
@@ -217,10 +217,9 @@ class Joint_Progression_Algorithm(object):
             all_concepts.extend(['wumpus_world','wumpus_inference_examples','logic_review','knowledge_base_definition'])
         
             tree_structure = {
-                        'Root': ['knowledge_base_definition','logic_review','wumpus_world'],
-                        'knowledge_base_definition': [],
+                        'Root': ['wumpus_specific','logic_review'],
                         'logic_review': [],
-                        'wumpus_world': [],
+                        'wumpus_specific': [],
                 }
         elif section == 'rational_agents':
             all_concepts.extend(['acting_rationally','peas','environment_types'])
@@ -240,6 +239,18 @@ class Joint_Progression_Algorithm(object):
                 'adversarial_search': [],
                 'simple_search':[],
                 'constraint_search': []
+            }
+        elif section == 'ml_intro':
+            all_concepts.extend(['ml_basic_concepts'])
+            tree_structure = {
+                'Root': ['ml_basic_concepts'],
+                'ml_basic_concepts': []
+            }
+        elif section == 'perceptron':
+            all_concepts.extend(['perceptron_qs'])
+            tree_structure = {
+                'Root': ['perceptron_qs'],
+                'perceptron_qs': []
             }
         else:
             raise Exception('Invalid section')
